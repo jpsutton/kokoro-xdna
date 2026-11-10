@@ -1,0 +1,3 @@
+[submodule "third_party/kokoro-onnx"]
+	path = third_party/kokoro-onnx
+	url = https://github.com/thewh1teagle/kokoro-onnx.git

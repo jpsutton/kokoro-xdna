@@ -1,0 +1,26 @@
+kokoro-xdna
+Copyright 2026 Jared Sutton
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This project builds on, and links against or downloads, the following software.
+None of it is redistributed in this repository except where stated.
+
+- Kokoro-82M model and voices (Apache-2.0), https://huggingface.co/hexgrad/Kokoro-82M.
+  The ONNX export and voice pack are downloaded by scripts/download_models.sh from
+  the kokoro-onnx releases.
+- kokoro-onnx (MIT), https://github.com/thewh1teagle/kokoro-onnx, used as a git
+  submodule in third_party/kokoro-onnx.
+- mlir-aie / IRON and the Peano compiler (Apache-2.0 WITH LLVM-exception, Copyright
+  Advanced Micro Devices, Inc.), https://github.com/Xilinx/mlir-aie. Cloned and
+  installed by scripts/setup_ironenv.sh. kernels/conv1d_npu.py and kernels/snake_npu.py
+  are derived from its programming_examples (whole_array matrix multiplication) and keep
+  that license.
+- AMD XRT (Apache-2.0), https://github.com/Xilinx/XRT. pyxrt is built from its source by
+  scripts/build_pyxrt.sh.
+- ONNX Runtime (MIT), https://github.com/microsoft/onnxruntime. The C API headers are
+  downloaded by scripts/fetch_ort_headers.sh.
+- onnxruntime-extensions is not used.
+
+The investigation that led to this project started from Unicorn-Commander/magic-unicorn-tts
+(Apache-2.0). None of its code is used here; see UPSTREAM_BUGS.md.

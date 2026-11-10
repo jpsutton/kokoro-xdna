@@ -1,0 +1,12 @@
+venv/
+build/
+kernels/build/
+models/*.onnx
+models/*.bin
+mlir-aie/
+ref/
+__pycache__/
+*.pyc
+third_party/onnxruntime-include/
+onnxruntime_profile_*.json
+*.egg-info/

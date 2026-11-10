@@ -1,0 +1,14 @@
+# Runtime venv (Python 3.13). pyxrt is built separately by scripts/build_pyxrt.sh.
+numpy>=2.0
+onnx>=1.16
+onnxruntime==1.31.*  # must match the headers fetched by scripts/fetch_ort_headers.sh (ORT_API_VERSION 31)
+ml_dtypes>=0.4
+scipy
+soundfile
+fastapi
+uvicorn
+pybind11
+# kokoro-onnx (vendored in third_party/kokoro-onnx) dependencies
+espeakng-loader>=0.2.4
+phonemizer-fork>=3.3.2
+colorlog
